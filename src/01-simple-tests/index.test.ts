@@ -10,7 +10,7 @@ describe('simpleCalculator tests', () => {
 
     const expectedResult = 244;
 
-    expect(simpleCalculator(addTestData)).toEqual(expectedResult);
+    expect(simpleCalculator(addTestData)).toBe(expectedResult);
   });
 
   test('should subtract two numbers', () => {
@@ -22,7 +22,7 @@ describe('simpleCalculator tests', () => {
 
     const expectedResult = 34;
 
-    expect(simpleCalculator(subtractTestData)).toEqual(expectedResult);
+    expect(simpleCalculator(subtractTestData)).toBe(expectedResult);
   });
 
   test('should multiply two numbers', () => {
@@ -34,7 +34,7 @@ describe('simpleCalculator tests', () => {
 
     const expectedResult = 45;
 
-    expect(simpleCalculator(multiplyTestData)).toEqual(expectedResult);
+    expect(simpleCalculator(multiplyTestData)).toBe(expectedResult);
   });
 
   test('should divide two numbers', () => {
@@ -46,19 +46,19 @@ describe('simpleCalculator tests', () => {
 
     const expectedResult = 9;
 
-    expect(simpleCalculator(divideTestData)).toEqual(expectedResult);
+    expect(simpleCalculator(divideTestData)).toBe(expectedResult);
   });
 
   test('should exponentiate two numbers', () => {
     const exponentTestData = {
-      a: 25,
-      b: 5,
-      action: Action.Divide,
+      a: 2,
+      b: 4,
+      action: Action.Exponentiate,
     };
 
-    const expectedResult = 5;
+    const expectedResult = 16;
 
-    expect(simpleCalculator(exponentTestData)).toEqual(expectedResult);
+    expect(simpleCalculator(exponentTestData)).toBe(expectedResult);
   });
 
   test('should return null for invalid action', () => {
